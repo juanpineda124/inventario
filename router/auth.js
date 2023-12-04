@@ -39,7 +39,7 @@ router.post('/', [
 
     } catch(error) {
         console.log(error);
-        res.status(500).send('Ocurrio un error al crear el usuario')
+        res.status(500).send('Ocurrio un error al autenticar el usuario')
     }
 });
 

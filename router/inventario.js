@@ -50,7 +50,7 @@ router.post('/',[validateJWT, validateRolAdmin], [
 
     } catch(error) {
         console.log(error);
-        res.status(500).send('Ocurrio un error al crear la marca')
+        res.status(500).send('Ocurrio un error al crear el inventario')
     }
 
 });
@@ -85,7 +85,7 @@ router.delete('/:id', [validateJWT, validateRolAdmin], async function (req, res)
         const inventario = await Inventario.findByIdAndDelete({_id: id})
         res.send(inventario);
     }catch(error){
-        res.status(500).send('Ocurrio un error al eliminar la marca') 
+        res.status(500).send('Ocurrio un error al eliminar el inventario') 
      }
 });
 
@@ -131,7 +131,7 @@ router.put('/:inventarioId', [validateJWT, validateRolAdmin], [
 
     }catch(error){
         console.log(error)
-        res.status(500).send('Ocurrio un error al actualizar el tipo equipo') 
+        res.status(500).send('Ocurrio un error al actualizar el usuario') 
     }
 });
 

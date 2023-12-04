@@ -50,7 +50,7 @@ router.delete('/:id', [validateJWT, validateRolAdmin], async function (req, res)
         const estado = await EstadoEquipo.findByIdAndDelete({_id: id})
         res.send(estado);
     }catch(error){
-        res.status(500).send('Ocurrio un error al eliminar el tipo equipo') 
+        res.status(500).send('Ocurrio un error al eliminar el estado de equipo') 
      }
 });
 
@@ -80,7 +80,7 @@ router.put('/:estadoId', [validateJWT, validateRolAdmin], [
 
     }catch(error){
         console.log(error)
-        res.status(500).send('Ocurrio un error al actualizar el tipo equipo') 
+        res.status(500).send('Ocurrio un error al actualizar el estado de equipo') 
     }
 });
 

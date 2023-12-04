@@ -86,7 +86,7 @@ router.put('/:usuarioId', [validateJWT, validateRolAdmin], [
 
         let usuario = await Usuario.findById(req.params.usuarioId);
         if(!usuario){
-            return res.status(400).send('Inventario no existe');
+            return res.status(400).send('Usuario no existe');
         }
         usuario.nombre = req.body.nombre;
         usuario.email = req.body.email;
